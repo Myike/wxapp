@@ -1,0 +1,12 @@
+<view class='about-content'>
+  <view class='title'>
+    <text>小程序简介</text>
+  </view>
+  <view class='about-view'>
+    <textarea class='text-content'>
+        本小程序立足于提供个人办公工具的使用，在方便大家的同时，本小程序一直走在升级改造的路程中,如有更好的建议请联系我哦
+    </textarea>
+  
+  </view>
+
+</view>
