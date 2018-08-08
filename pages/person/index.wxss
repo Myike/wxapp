@@ -1,0 +1,14 @@
+.content{
+  width: 100%;
+  height: 80rpx;
+  background-color: #009be0;
+}
+
+.t-item{
+  width: 48%;
+  height: 90%;
+  float:left;
+  margin-left: 15rpx;
+  color: black;
+  line-height: 80rpx;
+}

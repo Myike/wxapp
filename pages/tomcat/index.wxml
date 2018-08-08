@@ -1,0 +1,49 @@
+<!--pages/IDCard/IDCard.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      请输入查询秘钥
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <input class="inp" bindinput="IDCard" placeholder="秘钥" placeholder-style="font-size:30rpx"/>
+      <view class="inpimg">
+        <image src="../../images/search.png" class="pagesimg" />
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    
+    <view wx:for="{{getdata}}" wx:for-item="itemData" wx:key="index">
+        
+        <view class="pglist fc99">
+          <view class="pg-t fs36 fc99" data-url="{{itemData.basePath}}">容器({{index + 1}})详细信息：</view>
+          <view class="">
+              <view wx:for="{{itemData.list}}" wx:for-item="listItem" wx:key="id">
+                  <view class="pg-r fs32">应用：{{listItem.name}}          状态：{{listItem.status}}  
+                    <view class='tbtn-box'>
+                      <button class="tomcat-btn reload" data-opt="reload" data-project="{{listItem.name}}" data-url="{{itemData.basePath}}" bindtap="manageTomcat" >reload</button>
+                      <button class="tomcat-btn start" data-opt="start" data-project="{{listItem.name}}" data-url="{{itemData.basePath}}" bindtap="manageTomcat" >
+                        start
+                      </button>
+                      <button class="tomcat-btn stop" data-opt="stop" data-project="{{listItem.name}}" data-url="{{itemData.basePath}}" bindtap="manageTomcat">
+                        stop
+                      </button>
+                    </view>
+                  </view>
+              </view>
+          </view>
+          
+        </view>
+    </view>
+  </view>
+</view>

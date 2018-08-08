@@ -24,24 +24,23 @@ Page({
     server: [
       {
         img: "../../images/sfz.png",
-        openpath: "../../pages/IDCard/IDCard",
+        openpath: "../../pages/tomcat/index",
         text: "应用监控"
       },
       {
         img: "../../images/yhk.png",
-        openpath: "../../pages/bankQuery/bankQuery",
+        openpath: "../../pages/person/index",
         text: "个人账目"
       },
       {
-        img: "../../images/gsd.png",
-        openpath: "../../pages/MobileHome/MobileHome",
-        text: "功能测试"
-      },
-      {
         img: "../../images/ip.png",
-        openpath: "../../pages/IP/IP",
+        openpath: "../../pages/ip/index",
         text: "IP查询"
-      }]
+      }],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000
   },
   //事件处理函数
   bindViewTap: function() {

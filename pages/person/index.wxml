@@ -1,0 +1,8 @@
+<view class='content'>
+  <view class='t-item'>今日入账
+    <view>20.00↓</view>
+  </view>
+  <view class='t-item'>今日出账
+    <view>35.13↑</view>
+  </view>
+</view>

@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/tomcat/index",
+    "pages/ip/index",
+    "pages/person/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
