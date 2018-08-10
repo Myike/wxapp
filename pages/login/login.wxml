@@ -1,0 +1,48 @@
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current='0' bindtap="swichNav">普通登录</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current='1' bindtap="swichNav">动态密码登录</view>
+</view>
+
+
+<view class='container'>
+    <swiper current='{{currentTab}}' class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+        <swiper-item>
+            <view class='login-tab'>
+                    <!--账号-->
+                    <view class='view-input'>
+                        <image class="loginImg" src="../../images/username.png"></image>
+                        <input class="inputText" placeholder="手机号码/邮箱" bindinput="phoneInput" />
+                    </view>
+                    <view class="input-line"></view>      
+                    <!--密码-->
+                    <view class='view-input'>
+                        <image class="loginImg" src="../../images/password.png"></image>
+                        <input class="inputText" password="true" placeholder="密码" bindinput="passwordInput" />
+                    </view>
+            </view>
+            <view class='login-bottom'>
+                <navigator class='ps-title'>忘记密码？</navigator>
+                <button class='wx-title' bindtap="wxLogin">微信快捷登录</button>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view class='login-tab'>
+                    <!--账号-->
+                    <view class='view-input'>
+                        <image class="loginImg" src="../../images/username.png"></image>
+                        <input class="inputText" placeholder="手机号码" bindinput="phoneInput" />
+                    </view>
+                    <view class="input-line"></view>      
+                    <!--密码-->
+                    <view class='view-input'>
+                        <image class="loginImg" src="../../images/phone.png"></image>
+                        <input class="inputText phone-code" password="true" placeholder="请输入验证码"  bindinput="passwordInput" />
+                        <button class='codeBtn'>获取验证码</button>
+                    </view>
+            </view>
+            <view class='login-bottom'>
+                <button class='wx-title' bindtap="wxLogin">微信快捷登录</button>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

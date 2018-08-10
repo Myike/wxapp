@@ -1,0 +1,120 @@
+page{
+  height: 100%;
+}
+.swiper-tab{
+      width: 100%;
+      border-bottom: 2rpx solid white;
+      text-align: center;
+      line-height: 80rpx;
+}
+
+.swiper-tab-list{
+      display: inline-block;
+      width: 50%;
+      font-size: 30rpx;
+}
+
+.on{ 
+	    border-bottom: 5rpx solid rgb(11, 156, 247);
+}
+
+.container {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20rpx 0 20rpx 0;
+}
+
+.swiper-box{ 
+      display: block; 
+      height: 100%; 
+      width: 100%; 
+      overflow: hidden; 
+}
+.swiper-box view{
+	    text-align: center;
+}
+
+.login-tab{
+    width: 100%;
+    background-color: #fff;
+    border-top: 2rpx solid #e6e6e6;
+    border-bottom: 2rpx solid #e6e6e6;
+}
+
+.view-input{
+  width: 100%;
+  height: 110rpx;
+  background-color: white;
+  clear:both;
+}
+
+
+.input-line{
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin-top: 1px;
+}
+
+.loginImg {
+  width: 8%;
+  height: 60%;
+  float: left;
+  margin: 12px 0 15px 15px;
+}
+
+
+.inputText {
+  width: 85%;
+  height: 100%;
+  flex: block;
+  float: left;
+  text-align: left;
+  margin-left: 20rpx;
+  color: #cccccc;
+  font-size: small;
+}
+
+.phone-code{
+  width: 50%;
+}
+
+.login-bottom{
+  width: 100%;
+  font-size: medium;
+  color: rgb(17, 119, 182);
+  margin-top: 10rpx;
+}
+
+.ps-title{
+  float: left;
+  margin-left: 3%;
+}
+
+.wx-title{
+  float:right;
+  margin-right: 3%;
+  background: none;
+  border: none;  
+  font-size: medium;
+  color: rgb(17, 119, 182);
+  margin-top: -10rpx;
+}
+
+.wx-title::after{
+  border: none;
+}
+
+.codeBtn{
+  display: block;
+  float: right;
+  width: 180rpx;
+  height: 60rpx;
+  border: 1rpx solid rgb(17, 119, 182);
+  font-size: small;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  margin: 25rpx 40rpx 20rpx 0;
+  color: rgb(17, 119, 182);
+}

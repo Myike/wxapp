@@ -4,7 +4,8 @@
     "pages/about/about",
     "pages/tomcat/index",
     "pages/ip/index",
-    "pages/person/index"
+    "pages/person/index",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -28,7 +29,7 @@
         "pagePath": "pages/about/about",
         "iconPath": "images/guanyu1.png",
         "selectedIconPath": "images/guanyu.png",
-        "text": "关于"
+        "text": "我的"
       }
     ]
   },
