@@ -48,20 +48,41 @@ Page({
   },
 
   wxLogin: function(e){
+    var that = this;
     wx.login({
       success: function(e){
         if(e.code){
-            console.log(e);
             wx.request({
                 url: 'https://www.twperson.top/tomcat-monitor/wx/checkCode',
                 data:{code:e.code},
                 success: function(res){
                     if(res.data.code == "000000"){
-                      console.log("成功请求结果：" + res.data.data);
-                        wx.setStorage({
-                          key: res.data.data,
-                          data: '',
-                        })
+                      console.log(res)
+                       wx.setStorageSync("login-token", res.data.data);
+                       
+                       wx.getUserInfo({
+                         success:function(ures){
+                           if (ures.errMsg == "getUserInfo:ok"){
+                             wx.showToast({
+                               title: '您好！' + ures.userInfo.nickName,
+                               icon:"success",
+                               duration:10000,
+                               mask:true
+                             })
+                             setTimeout(function(){
+                                let pages = getCurrentPages(); //获取当前页面js里面的pages里的所有信息。
+                                let prevPage = pages[pages.length - 2];
+                                prevPage.setData({
+                                  userInfo: ures.userInfo
+                                })
+                                wx.navigateBack({
+                                  delta: 1
+                                })
+                             },1000)
+                             
+                           }
+                         }
+                       })
                     }
                 }
             })
