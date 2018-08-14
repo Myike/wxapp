@@ -6,15 +6,19 @@ Page({
    */
   data: {
     loginUrl: "../../pages/login/login",
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    userInfo: {
+      avatarUrl:"../../images/y.jpg"
+    },
+    hasUserInfo: 0,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    userTitle:"请先登录哦"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
   },
 
 
@@ -29,7 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
@@ -65,5 +69,28 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+
+  //自定义函数
+  userSetting: function(){
+    console.log("用户设置")
+  },
+
+  userMessage: function(){
+    console.log("用户信息");
+  },
+
+  userLogin: function(e){
+    var status = e.currentTarget.dataset.status;
+    console.log(status);
+    if(status == 0){
+      wx.navigateTo({
+        url: '../../pages/login/login',
+      })
+    }
+    
   }
+
+
 })

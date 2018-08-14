@@ -62,18 +62,20 @@ Page({
                        
                        wx.getUserInfo({
                          success:function(ures){
+                           console.log("dfad")
                            if (ures.errMsg == "getUserInfo:ok"){
                              wx.showToast({
-                               title: '您好！' + ures.userInfo.nickName,
+                               title: '欢迎登录! ' + ures.userInfo.nickName,
                                icon:"success",
-                               duration:10000,
                                mask:true
                              })
                              setTimeout(function(){
                                 let pages = getCurrentPages(); //获取当前页面js里面的pages里的所有信息。
                                 let prevPage = pages[pages.length - 2];
                                 prevPage.setData({
-                                  userInfo: ures.userInfo
+                                  userInfo: ures.userInfo,
+                                  hasUserInfo:1,
+                                  userTitle:ures.userInfo.nickName
                                 })
                                 wx.navigateBack({
                                   delta: 1
@@ -81,6 +83,10 @@ Page({
                              },1000)
                              
                            }
+                         },
+                         fail:function(){
+                           
+                           console.log("失败")
                          }
                        })
                     }

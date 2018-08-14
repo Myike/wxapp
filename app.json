@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/about/about",
+    "pages/index/index",
     "pages/tomcat/index",
     "pages/ip/index",
     "pages/person/index",
