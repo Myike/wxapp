@@ -1,0 +1,6 @@
+<view class="container">
+    <rich-text class="title">简介</rich-text>
+    <textarea class='content-text'>
+        本小程序立足于提供个人办公工具的使用，在给大家带来便利的同时，本小程序也一直走在升级改造的道路上；如果您有更好的建议和意见欢迎您与我取得联系哦！
+    </textarea>
+</view>

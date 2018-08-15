@@ -45,4 +45,8 @@
             </view>
         </swiper-item>
     </swiper>
+    <view class='login-btn'>
+          <button class="login-btn1">登录</button>
+          <button class='login-btn2'>还没有账号？去注册</button>
+        </view>
 </view>

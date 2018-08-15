@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url(https://img.wshoponlinet.cn/picture/backgroud.jpg)
+}
+
+.title {
+  font-size: larger;
+  margin-top: 40rpx;
+}
+
+.content-text {
+  width: 96%;
+  margin: 30rpx 2% 0 2%;
+  text-indent: 40rpx;
+  text-align: left;
+  font-size: medium;
+}

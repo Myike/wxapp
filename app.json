@@ -1,11 +1,17 @@
 {
   "pages": [
+    "pages/index/index", 
     "pages/about/about",
-    "pages/index/index",
+    "pages/login/login",
     "pages/tomcat/index",
     "pages/ip/index",
     "pages/person/index",
-    "pages/login/login"
+    "pages/person/person",
+    "pages/tool/tool",
+    "pages/operator/index",
+    "pages/cooperation/cooperation",
+    "pages/us/us",
+    "pages/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"light",

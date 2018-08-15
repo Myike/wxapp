@@ -1,0 +1,121 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #cecbcb;
+  clear: both;
+}
+
+.header{
+  width: 100vw;
+  height: 28vh;
+  background-color: white;
+}
+
+.header-title{
+  margin: 3vh 0 0 15rpx;
+  font-size: large;
+}
+
+.header-type {
+  width: 100vw;
+  clear: both;
+}
+
+.parameter-info {
+  width: 28vw;
+  height: 6vh;
+  display: block;
+  border: 1rpx solid rgb(185, 182, 182);
+  float: left;
+  margin-left: 4%;
+  font-size: small;
+  margin-top: 3vh;
+  text-align: center;
+  line-height: 6vh;
+  border-radius: 8rpx;
+  color: rgb(110, 109, 109);
+}
+
+.checked_parameter {
+  color: white;
+  background-color: rgb(2, 130, 250);
+  border: 1rpx solid rgb(2, 130, 250);
+}
+
+
+.content{
+  width: 100%;
+  padding-bottom: 20rpx;
+  background-color: white;
+  margin-top: 1vh;
+}
+
+.content textarea{
+  width: 94vw;
+  height: 30vh;
+  margin: 2vh 3vw 0 3vw;
+  border: 1rpx solid #686666;
+  font-size: small;
+  position: relative;
+}
+
+.content textarea text{
+  position: absolute;
+  bottom: 1vh;
+}
+.input-msg {
+  left: 10rpx;
+  color: red;
+}
+
+.input-size {
+  right: 10rpx;
+  color: #cecbcb;
+}
+
+.bottom{
+  width: 100vw;
+  border-top: 1rpx #cecbcb solid;
+  border-bottom: 1rpx #cecbcb solid;
+  background-color: white;
+  margin-top: 1vh;
+}
+
+.bottom-input{
+  width: 100vw;
+  height: 8vh;
+  line-height: 8vh;
+}
+
+.bottom-input text{
+  float: left;
+  font-size: large;
+  margin-left: 10rpx;
+}
+
+.bottom-input input{
+  float: right;
+  font-size: medium;
+  margin: 15rpx;
+}
+
+
+.input-line{
+  width: 100ww;
+  height: 3rpx;
+  background-color: #cecbcb;
+}
+
+.foot{
+  width: 100vw;
+  margin-top: 1vh;
+}
+
+.foot button{
+  width: 100vw;
+  height: 8vh;
+  line-height: 8vh;
+  background-color: rgb(6, 168, 33);
+}

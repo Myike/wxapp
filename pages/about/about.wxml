@@ -25,12 +25,39 @@
       <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
   </view>
   <view class='about-bottom'>
-      <navigator class='about-item'></navigator>
-      <navigator class='about-item'></navigator>
-      <navigator class='about-item'></navigator>
-      <navigator class='about-item'></navigator>
-      <navigator class='about-item'></navigator>
-      <navigator class='about-item'></navigator>
+      <view class='about-category'>
+        <navigator class='about-item' url='../../pages/person/person'>
+          <image src='../../images/person.png'></image>
+          <text>个人信息</text>
+        </navigator>
+      </view> 
+      <view class='about-category category1'>
+        <navigator class='about-item' url='../../pages/tool/tool'>
+          <image src='../../images/tool.png'></image>
+          <text>我的工具</text>
+        </navigator>
+        <view class='about-line'></view>
+        <navigator class='about-item' url='../../pages/operator/index'>
+          <image src='../../images/history.png'></image>
+          <text>操作记录</text>
+        </navigator>
+      </view>
+      <view class='about-category category1'>
+        <navigator class='about-item' url='../../pages/cooperation/cooperation'>
+          <image src='../../images/cooperation.png'></image>
+          <text>商务合作</text>
+        </navigator>
+        <view class='about-line'></view>
+        <navigator class='about-item' url='../../pages/us/us'>
+          <image src='../../images/about.png'></image>
+          <text>关于我们</text>
+        </navigator>
+        <view class='about-line'></view>
+        <navigator class='about-item' url='../../pages/feedback/feedback'>
+          <image src='../../images/feedback.png'></image>
+          <text>意见反馈</text>
+        </navigator>
+      </view>
   </view>
 
 </view>

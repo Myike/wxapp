@@ -1,0 +1,33 @@
+<view class="container">
+  <view class='header'>
+    <view class='header-title'>反馈类型</view>
+    <view class='header-type'>
+        <block wx:for="{{parameter}}" wx:key="parameter">
+          <text class='parameter-info {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.title}}</text>
+        </block>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='header-title'>反馈内容</view>
+    <view class='header-type'>
+        <textarea placeholder='感谢所有提出宝贵意见的用户，我们会不断的改进，谢谢大家！' maxlength='{{inputMax}}' bindinput='inputs'>
+          <text class='input-msg'>{{msg}}</text>
+          <text class='input-size'>{{currentWordNumber|0}}/{{inputMax}}</text>
+        </textarea>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='bottom-input'>
+      <text>姓名</text>
+      <input placeholder='请填写真实姓名' bindinput='nameInput'></input>
+    </view>
+    <view class='input-line'></view>
+    <view class='bottom-input'>
+      <text>联系方式</text>
+      <input placeholder='请填写能联系的手机号' bindinput='phoneInput'></input>
+    </view>
+  </view>
+  <view class='foot'>
+    <button bindtap='submit'>提交反馈</button>
+  </view>
+</view>

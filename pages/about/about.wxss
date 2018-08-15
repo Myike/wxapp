@@ -1,7 +1,7 @@
 .about-content{
-  width: 100%;
+  width: 100vw;
   box-sizing:border-box;
-  background-color: #e6e6e6;
+  background-color: #d4d3d3;
   padding: 0;
   margin: 0;
 }
@@ -61,7 +61,7 @@
 
 .about-top {
   width: 100%;
-  height: 350rpx;
+  height: 35vh;
   background-color: rgb(83, 81, 81);
   padding: 0;
   margin: 0;
@@ -92,11 +92,52 @@
 
 .about-bottom {
   width: 100%;
+  margin-top: -10rpx;
+  padding: 0;
+}
+
+.about-category {
+  width: 100%;
+  margin-top: 0rpx;
+  padding: 0rpx;
+}
+
+.category1 {
+  margin-top: 20rpx;  
 }
 
 .about-item {
   width: 100%;
-  height: 150rpx;
+  height: 120rpx;
   background-color: rgb(252, 246, 246);
-  margin-top: 15rpx;
+  position: relative;
+  padding: 0;
+  font-size: medium;
+}
+.about-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin-top: 1px;
+}
+
+.about-item::after{
+  content: url(https://img.wshoponlinet.cn/picture/right.png?x-oss-process=image/resize,m_fixed,h_20,w_20);
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+
+.about-item image{
+  width: 85rpx;
+  height: 85rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left
+}
+
+.about-item text{
+  line-height: 120rpx;
+  float: left;
+  margin-left: 15rpx;
 }
