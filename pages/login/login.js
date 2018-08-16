@@ -58,11 +58,11 @@ Page({
                 success: function(res){
                     if(res.data.code == "000000"){
                       console.log(res)
-                       wx.setStorageSync("login-token", res.data.data);
-                       
+                       wx.setStorageSync("user-token", res.data.msg);
                        wx.getUserInfo({
                          success:function(ures){
-                           console.log("dfad")
+                           console.log("用户信息：");
+                           console.log(ures)
                            if (ures.errMsg == "getUserInfo:ok"){
                              wx.showToast({
                                title: '欢迎登录! ' + ures.userInfo.nickName,
@@ -75,7 +75,7 @@ Page({
                                 prevPage.setData({
                                   userInfo: ures.userInfo,
                                   hasUserInfo:1,
-                                  userTitle:ures.userInfo.nickName
+                                  userTitle: "您好！"+ures.userInfo.nickName
                                 })
                                 wx.navigateBack({
                                   delta: 1
@@ -85,8 +85,10 @@ Page({
                            }
                          },
                          fail:function(){
-                           
-                           console.log("失败")
+                           wx.showToast({
+                             title: '获取用户信息失败',
+                             icon:"none"
+                           })
                          }
                        })
                     }

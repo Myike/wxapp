@@ -18,7 +18,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      userInfo:getApp().globalData.userInfo,
+      hasUserInfo: getApp().globalData.hasUserInfo
+    })
+
+    if (getApp().globalData.hasUserInfo==1){
+      this.setData({
+        userTitle: "您好！" + getApp().globalData.userInfo.nickName
+      })
+    }
+
   },
 
 
@@ -83,7 +93,6 @@ Page({
 
   userLogin: function(e){
     var status = e.currentTarget.dataset.status;
-    console.log(status);
     if(status == 0){
       wx.navigateTo({
         url: '../../pages/login/login',

@@ -96,7 +96,7 @@ Page({
       })
       return false;
     }
-    requestUrl += "?appPath=" + e.target.dataset.url + "&webAppName="+projectName;
+    requestUrl += "?appPath=" + e.target.dataset.url + "&webAppName="+projectName+"&token="+wx.getStorageSync("user-token");
     wx.showLoading({
       title: '处理中',
     });
@@ -161,6 +161,7 @@ Page({
     wx.request({
       url: "https://www.wshoponlinet.cn/tomcat-monitor/manage/find/list",
       data: {
+        token:wx.getStorageSync("user-token")
       },
       header: {
         'content-type': 'application/json' // 默认值
