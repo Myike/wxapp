@@ -47,6 +47,12 @@ Page({
     }
   },
 
+  toRegister: function(e){
+    wx.navigateTo({
+      url: '../../pages/register/index',
+    })
+  },
+
   wxLogin: function(e){
     var that = this;
     wx.login({

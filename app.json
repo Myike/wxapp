@@ -2,16 +2,16 @@
   "pages": [
     "pages/index/index", 
     "pages/about/about",
-    "pages/login/login",
     "pages/tomcat/index",
+    "pages/login/login",
     "pages/ip/index",
     "pages/person/index",
-    "pages/person/person",
     "pages/tool/tool",
     "pages/operator/index",
     "pages/cooperation/cooperation",
     "pages/us/us",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/register/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
