@@ -21,7 +21,7 @@
                     </view>
             </view>
             <view class='login-bottom'>
-                <navigator class='ps-title'>忘记密码？</navigator>
+                <navigator class='ps-title' url='../../pages/retrieve/index'>忘记密码？</navigator>
                 <button class='wx-title' bindtap="wxLogin">微信快捷登录</button>
             </view>
         </swiper-item>

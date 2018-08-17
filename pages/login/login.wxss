@@ -111,7 +111,7 @@ page{
 .codeBtn{
   display: block;
   float: right;
-  width: 180rpx;
+  width: 200rpx;
   height: 60rpx;
   border: 1rpx solid rgb(17, 119, 182);
   font-size: small;

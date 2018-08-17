@@ -30,7 +30,7 @@
   </view>
   <view class='about-bottom'>
       <view class='about-category'>
-        <navigator class='about-item' url='../../pages/person/person'>
+        <navigator class='about-item' url='../../pages/person/index'>
           <image src='../../images/person.png'></image>
           <text>个人信息</text>
         </navigator>

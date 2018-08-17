@@ -9,16 +9,16 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgUrls: [{
-      img: "../../images/EmptyBanner.jpg",
+      img: "../../images/EmptyBanner3.jpg",
       openpath: "../../pages/figure/figure"
     }, {
       img: "../../images/EmptyBanner1.jpg",
       openpath: "../../pages/bankQuery/bankQuery"
     }, {
-      img: "../../images/EmptyBanner2.jpg",
+      img: "../../images/EmptyBanner.jpg",
       openpath: "../../pages/IDCard/IDCard"
     }, {
-      img: "../../images/EmptyBanner3.jpg",
+      img: "../../images/EmptyBanner2.jpg",
       openpath: "../../pages/MobileHome/MobileHome"
     }],
     server: [

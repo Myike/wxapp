@@ -64,30 +64,63 @@ Page({
                 success: function(res){
                     if(res.data.code == "000000"){
                       console.log(res)
-                       wx.setStorageSync("user-token", res.data.msg);
+                       wx.setStorageSync("user-token", res.data.data);
                        wx.getUserInfo({
                          success:function(ures){
                            console.log("用户信息：");
                            console.log(ures)
                            if (ures.errMsg == "getUserInfo:ok"){
-                             wx.showToast({
-                               title: '欢迎登录! ' + ures.userInfo.nickName,
-                               icon:"success",
-                               mask:true
-                             })
-                             setTimeout(function(){
-                                let pages = getCurrentPages(); //获取当前页面js里面的pages里的所有信息。
-                                let prevPage = pages[pages.length - 2];
-                                prevPage.setData({
-                                  userInfo: ures.userInfo,
-                                  hasUserInfo:1,
-                                  userTitle: "您好！"+ures.userInfo.nickName
-                                })
-                                wx.navigateBack({
-                                  delta: 1
-                                })
-                             },1000)
-                             
+                              wx.showLoading({
+                                title: '登陆中...',
+                                mask:true,
+
+                              })
+
+                              wx.request({
+                                url: getApp().globalData.serverPath + '/wx/wxLogin',
+                                method:"POST",
+                                header:{
+                                  'content-type': 'application/x-www-form-urlencoded'
+                                },
+                                data:{
+                                  signature: ures.signature,
+                                  rawData: ures.rawData,
+                                  iv: ures.iv,
+                                  encryptedData: ures.encryptedData,
+                                  code: res.data.data
+                                },
+                                success: function(res2){
+                                  setTimeout(function(){
+                                    wx.hideLoading();
+                                    if (res2.data.code && res2.data.code == "000000") {
+                                      wx.showToast({
+                                        title: '登录成功! ' + ures.userInfo.nickName,
+                                        icon: "success",
+                                        mask: true
+                                      })
+                                      setTimeout(function () {
+                                        let pages = getCurrentPages(); //获取当前页面js里面的pages里的所有信息。
+                                        let prevPage = pages[pages.length - 2];
+                                        prevPage.setData({
+                                          userInfo: ures.userInfo,
+                                          hasUserInfo: 1,
+                                          userTitle: "您好！" + ures.userInfo.nickName
+                                        })
+                                        wx.navigateBack({
+                                          delta: 1
+                                        })
+                                      }, 1000)
+                                    } else {
+                                      wx.showToast({
+                                        title: '登录失败!请重试 ',
+                                        icon: "none",
+                                        mask: true
+                                      })
+                                    }
+
+                                  },1500); 
+                                }
+                              })
                            }
                          },
                          fail:function(){

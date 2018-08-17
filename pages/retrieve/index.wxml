@@ -13,11 +13,15 @@
     <view class='top-line'></view>
     <view class='top-item'>
       <image  src="../../images/password.png"></image>
-      <input class="inputText" placeholder="密码" bindinput="phoneInput" />
+      <input class="inputText" placeholder="请输入密码" bindinput="phoneInput" />
+    </view>
+    <view class='top-line'></view>
+    <view class='top-item'>
+      <image  src="../../images/password.png"></image>
+      <input class="inputText" placeholder="请再一次输入密码" bindinput="phoneInput" />
     </view>
   </view>
   <view class='bottom'>
-    <button>注册</button>
-    <text>“点击注册”表示您已同意《码邑客服务条款》</text>
+    <button>找回并修改</button>
   </view>
 </view>

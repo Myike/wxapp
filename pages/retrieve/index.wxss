@@ -8,10 +8,10 @@
 
 .top{
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   background-color: white;
-  border-top: 1rpx solid #d4d3d3;
-  border-bottom: 1rpx solid #d4d3d3;
+  border-top: 1rpx solid #e9e6e6;
+  border-bottom: 1rpx solid #e9e6e6;
   margin-top: 15rpx;
 }
 
@@ -24,8 +24,8 @@
 
 .top-line{
   width: 100%;
-  height: 1rpx;
-  background-color: #d4d3d3;
+  height: 2rpx;
+  background-color: #e9e6e6;
   clear: both;
 }
 
@@ -63,10 +63,4 @@
   width: 100%;
   background-color: rgb(52, 135, 243);
   color: white;
-}
-
-.bottom text{
-  font-size: small;
-  color: #b6b4b4;
-  margin-top: 3vh;
 }

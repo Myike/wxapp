@@ -10,7 +10,8 @@ App({
   globalData: {
     userInfo: null,
     scopeList: ["scope.userInfo", "scope.userLocation", "scope.record","scope.writePhotosAlbum","scope.camera"],
-    hasUserInfo:0
+    hasUserInfo:0,
+    serverPath:"https://www.twperson.top/tomcat-monitor"
   },
   setGlobalData:function(){
     //获取用户信息
