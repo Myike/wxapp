@@ -79,7 +79,7 @@ Page({
     var option = e.target.dataset.opt;
     var projectName = e.target.dataset.project;
     console.log(projectName)
-    var requestUrl = "https://www.wshoponlinet.cn/tomcat-monitor/manage/";
+    var requestUrl = "https://tzwyun.top/tomcat-monitor/manage/";
     var baseUrl = ""
     if (option == "reload"){
       requestUrl += "reloadApp";
@@ -148,7 +148,7 @@ Page({
     var IDCard = this.data.IDCaed;
     //var reg = /^\d{6}(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|[xX])$/;
     //if (reg.test(IDCard) === false) {
-    if(IDCard != "tzw951004wyx"){
+    if(IDCard != "***"){
       wx.showToast({
         title: '输入不合法',
         icon: 'none',
@@ -159,7 +159,7 @@ Page({
     }
     //请求数据
     wx.request({
-      url: "https://www.wshoponlinet.cn/tomcat-monitor/manage/find/list",
+      url: "https:///tzwyun.top/tomcat-monitor/manage/find/list",
       data: {
         token:wx.getStorageSync("user-token")
       },
